@@ -1,0 +1,22 @@
+{
+    "pluginName": "经纬度查询",
+    "description": "我的第一个uTools插件",
+    "author": "danny_zhong",
+    "main": "index.html",
+    "version": "0.0.1",
+    "logo": "logo.png",
+    "features": [{
+        "code": "经纬度",
+        "explain": "hello world",
+        "cmds": [{
+                "type": "regex",
+                "label": "查询所在地区经纬度",
+                "match": "/^经纬度/i",
+                "minLength": 1,
+                "maxLength": 20
+            }
+
+
+        ]
+    }]
+}
