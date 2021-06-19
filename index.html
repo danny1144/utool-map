@@ -41,7 +41,9 @@
             optional
         }) => {
             const address = payload.split("经纬度")[1]
-            if (address === null || address === '') return;
+            if (address === null || address.trim() === '') {
+                address = '江苏苏州'
+            }
             renderMap(address)
 
         })
