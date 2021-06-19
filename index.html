@@ -42,9 +42,20 @@
         }) => {
             const address = payload.split("经纬度")[1]
             if (address === null || address === '') return;
+            renderMap(address)
+
+        })
+        utools.setSubInput(({
+            text
+        }) => {
+            if (text === null || text === '') return;
+            renderMap(text)
+        }, '搜索')
+
+        function renderMap(loc) {
             AMap.plugin('AMap.Geocoder', function () {
                 var geocoder = new AMap.Geocoder()
-                geocoder.getLocation(address, function (status, result) {
+                geocoder.getLocation(loc, function (status, result) {
                     if (status === 'complete' && result.info === 'OK') {
                         // result中对应详细地理坐标信息
                         console.log(result)
@@ -67,8 +78,7 @@
                     }
                 })
             })
-
-        })
+        }
     </script>
 
 </body>

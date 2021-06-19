@@ -7,7 +7,7 @@
     "logo": "logo.png",
     "features": [{
         "code": "经纬度",
-        "explain": "hello world",
+        "explain": "经纬度",
         "cmds": [{
                 "type": "regex",
                 "label": "查询所在地区经纬度",
