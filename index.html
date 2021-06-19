@@ -45,14 +45,13 @@
                 address = '江苏苏州'
             }
             renderMap(address)
-
+            utools.setSubInput(({
+                text
+            }) => {
+                if (text === null || text === '') return;
+                renderMap(text)
+            }, '搜索')
         })
-        utools.setSubInput(({
-            text
-        }) => {
-            if (text === null || text === '') return;
-            renderMap(text)
-        }, '搜索')
 
         function renderMap(loc) {
             AMap.plugin('AMap.Geocoder', function () {
